@@ -1,0 +1,36 @@
+<meta charset="UTF-8">
+<script>
+    /*
+    PROBLEMA
+    Peça para o programa perguntar ao professor regente o nome dos três candidados a representante da sala.
+    Peça também para o programa perguntar ao professor regente a quantidade de alunos votantes.
+    Desenvolva um programa que armazene o voto de cada aluno da sala e apresente o resultado da votação, com o quantitativo de votos e também a porcentagem de votos de cada candidato a representante de sala.
+    */
+
+    //ENTRADA
+    let cand1 = prompt("Nome do primeiro candidato a representante");
+    let cand2 = prompt("Nome do segundo candidato a representante");
+    let cand3 = prompt("Nome do terceiro candidato a representante");
+    let alunos = parseInt(prompt("Quantos alunos votantes tem na sala: "));
+    let votosCand1 = [];
+    let porcentagemCand1 = null;
+    let votosCand2 = [];
+    let porcentagemCand2 = null;
+    let votosCand3 = [];
+    let porcentagemCand3 = null;
+    let votoNulo = [];
+    let voto = null;
+    //PROCESSAMENTO
+    for(contador = 1; contador <= alunos; contador++){
+        voto = parseInt(prompt(`candidatos: ${cand1},  ${cand2}, ${cand3} (1-${cand1} |2-${cand2} |3- ${cand3})`))
+        if(voto === 1) votosCand1.push(voto)
+        else if (voto === 2) votosCand2.push(voto)
+        else if (voto === 3) votosCand3.push(voto)
+        else votoNulo.push(voto)
+    }
+    porcentagemCand1 = (votosCand1.length / alunos) * 100
+    porcentagemCand2 = (votosCand2.length / alunos) * 100
+    porcentagemCand3 = (votosCand3.length / alunos) * 100
+    //SAÍDA
+    document.write(`Candidato: ${cand1}</br>Quantidade de votos: ${votosCand1.length}</br>Porcentagem de votos: ${porcentagemCand1.toFixed(2)}% </br></br>Candidato:${cand2} </br>Quantidade de votos: ${votosCand2.length}</br>Porcentagem de votos: ${porcentagemCand2.toFixed(2)}%</br></br>Candidato: ${cand3}</br>Quantidade de votos: ${votosCand3.length}</br>Porcentagem de votos: ${porcentagemCand3.toFixed(2)}%`)
+</script>

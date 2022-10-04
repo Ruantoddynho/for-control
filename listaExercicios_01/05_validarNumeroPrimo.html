@@ -1,0 +1,20 @@
+<meta charset="UTF-8">
+<script>
+    /*
+    PROBLEMA
+    Faça um programa que peça para o usuário informar um número. Identifique se o número fornecido pelo usuário é um número primo e apresente na tela.
+    */
+
+    //ENTRADA
+    let numero = parseInt(prompt("Informe um número"));
+    let quantidade = 0;
+    //PROCESSAMENTO
+    for(let contador = 1; contador <= numero; contador++){
+        if(numero % contador === 0)
+        quantidade++;
+    }
+    if(quantidade > 2) document.write(`O número ${numero} não é primo`)
+    else document.write(`O número ${numero} é primo`)
+    //SAÍDA
+
+</script>
